@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <title>Crystal Collector!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron content">
+
+            <h1 class="display-4">Crystal Collector</h1>
+
+            <div id="intro">
+                <p class="lead">The objective of Crystal Collector is to match your score with the crystal score by
+                    adding crystals to your collection. You can collect crystals by clicking on one of the four crystal
+                    images. Each crystal has a value that is predetermined before each round. If your score goes over
+                    the crystal score, you lose; otherwise if you match your score with the crystal score, you win!</p>
+                <hr class="my-4">
+                <p>Click on this button to begin!</p>
+                <p class="lead">
+                    <a id="intro-button" class="btn btn-primary btn-lg" href="#" role="button">Begin</a>
+                </p>
+            </div>
+
+            <div id="content">
+                <p>Press any key start playing.</p>
+
+                <p>Crystal score:
+                    <span id="crystal-score-text"></span>
+                </p>
+
+                <p>Your score:
+                    <span id="user-score-text"></span>
+                </p>
+
+                <p>Wins:
+                    <span id="wins-text"></span>
+                </p>
+
+                <p>Losses:
+                    <span id="losses-text"></span>
+                </p>
+            </div>
+
+            <div id="defeat">
+                <p>You lost!</p>
+                <br>
+                <a id="lose-button" class="btn btn-primary btn-lg" href="#" role="button">Play Again</a>
+            </div>
+
+            <div id="victory">
+                <p>You won!</p>
+                <br>
+                <a id="win-button" class="btn btn-primary btn-lg" href="#" role="button">Play Again</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
