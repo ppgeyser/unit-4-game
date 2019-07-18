@@ -16,11 +16,23 @@ $(document).ready(function () {
         var crystalScore = Math.floor(Math.random()*(102)+19);
         console.log(crystalScore);
 
-        //Print wins, losses, and userscore
+        //Print wins, losses, crystalscore, and userscore
+        $('#crystal-score-text').text(crystalScore);
+        $('#user-score-text').text(userScore);
+        $('#wins-text').text(wins);
+        $('#losses-text').text(losses);
 
         //randomize values for each of the four crystals
-            //Math.floor(Math.random()*(max-min+1)+min);
-            //min: 1, max: 12
+        function generateCrystalValues () {
+
+            //Math.floor(Math.random()*(max-min+1)+min); min: 1, max: 12
+            function randomizeValues () {
+                Math.floor(Math.random()*(12)+1);
+            }
+
+            
+        }
+            
 
         //reset function
             //userscore = 0
