@@ -1,0 +1,17 @@
+body {
+    background-image: url(../images/mystical-background.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+}
+
+.content {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    opacity: .8;
+}
+
+.crystal-image {
+    margin: 25px;
+    opacity: 1;
+}
