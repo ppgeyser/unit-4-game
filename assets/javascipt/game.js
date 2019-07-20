@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('#defeat').hide();
     $('#victory').hide();
 
-    $("#intro-button").click(function(){
+    $("#intro-button").click(function () {
         $("#intro").hide();
         $("#content").show();
 
@@ -16,7 +16,7 @@ $(document).ready(function () {
             'assets/images/crystal-blue.png',
             'assets/images/crystal-green.png',
             'assets/images/crystal-orange.png',
-            'assets/images/crystal-red.png' 
+            'assets/images/crystal-red.png'
         ];
 
         //Print wins, losses, crystalscore, and userscore
@@ -25,11 +25,11 @@ $(document).ready(function () {
         $('#losses-text').text(losses);
 
         //generate random number between 19 and 120 for crystal score
-        var crystalScore = Math.floor(Math.random()*(102)+19);
+        var crystalScore = Math.floor(Math.random() * (102) + 19);
         $('#crystal-score-text').text(crystalScore);
 
         //randomize values for each of the four crystals
-        function generateCrystals () {
+        function generateCrystals() {
 
             for (var i = 0; i < crystalPath.length; i++) {
 
@@ -44,24 +44,24 @@ $(document).ready(function () {
 
                 //add random crystal value between 1 and 12
                 //Math.floor(Math.random()*(max-min+1)+min); min: 1, max: 12
-                    //Math.floor(Math.random()*(12)+1);
-                Crystal.attr("crystalValue", (Math.floor(Math.random()*(12)+1)));
+                //Math.floor(Math.random()*(12)+1);
+                Crystal.attr("crystalValue", (Math.floor(Math.random() * (12) + 1)));
 
                 //add crystal <img> tag to crystals div
                 $("#crystals").append(Crystal);
-              }
             }
+        }
 
         generateCrystals()
 
 
         //reset function
-        function reset () {
+        function reset() {
             //userscore = 0
             userScore = 0;
 
             //randomize crystal score
-            crystalScore = Math.floor(Math.random()*(102)+19);
+            crystalScore = Math.floor(Math.random() * (102) + 19);
 
             //clear pre-existing crystals
             $('#crystals').html('');
@@ -73,11 +73,11 @@ $(document).ready(function () {
             $('#crystal-score-text').text(crystalScore);
 
             //randomize crystal values
-            generateCrystals ();
+            generateCrystals();
         }
-            
+
         //crystal onclick
-        $(".crystal-image").on("click", function() {
+        $(".crystal-image").on("click", function () {
 
             //add crystal value to userscore
             var crystalValue = ($(this).attr("crystalValue"));
@@ -98,25 +98,25 @@ $(document).ready(function () {
 
                 //play again onclick
                 $("#win-button").on("click", function () {
-        
+
                     //reset function, show content screen
                     $('#victory').hide();
                     $("#content").show();
-                    reset ();
+                    reset();
                 })
-                    
+
             }
 
         });
 
-        
+
 
         //if crystal score < userscore
-            //show defeat screen
-            //losses++
-            //play again onclick
-                //reset function, show content screen
-        
-      });
-    
+        //show defeat screen
+        //losses++
+        //play again onclick
+        //reset function, show content screen
+
+    });
+
 });
