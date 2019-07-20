@@ -77,7 +77,7 @@ $(document).ready(function () {
         }
 
         //crystal onclick
-        $(".crystal-image").on("click", function () {
+        $(document).on("click", ".crystal-image", function () {
 
             //add crystal value to userscore
             var crystalValue = ($(this).attr("crystalValue"));
