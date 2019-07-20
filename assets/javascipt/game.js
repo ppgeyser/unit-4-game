@@ -107,15 +107,28 @@ $(document).ready(function () {
 
             }
 
-        });
-
-
-
         //if crystal score < userscore
-        //show defeat screen
-        //losses++
-        //play again onclick
-        //reset function, show content screen
+        if (crystalScore < userScore) {
+            
+            //show defeat screen
+            $("#content").hide();
+            $('#defeat').show();
+
+            //losses++
+            losses++;
+
+            //play again onclick
+            $('#lose-button').on('click', function(){
+
+                //reset function, show content screen
+                $('#defeat').hide();
+                $('#content').show();
+                reset();
+            })
+                
+            
+            }
+        });
 
     });
 
