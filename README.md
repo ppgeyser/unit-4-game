@@ -1,4 +1,4 @@
-# unit-4-game
+# Crystal Collector
 
 The objective of Crystal Collector is to match your score with the crystal score by adding crystals to your collection. You can collect crystals by clicking on one of the four crystal images. Each crystal has a value that is predetermined before each round. If your score goes over the crystal score, you lose; otherwise if you match your score with the crystal score, you win!
 
